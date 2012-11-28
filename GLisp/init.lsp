@@ -6,7 +6,7 @@
 (setq *trace-macroexpand* nil)
 (setq *trace-closure* nil)
 (setq *libraries* nil)
-(setq *library-path* "/Users/jan/Desktop/Development/GGLisp/GGLisp/")
+(setq *library-path* "")
 
 (funset 'list (lambda l l))
 

@@ -32,18 +32,26 @@
 		3D88317616669A7D00C3743B /* SPrinter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D88315C16669A7D00C3743B /* SPrinter.m */; };
 		3D88317716669A7D00C3743B /* SReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D88315E16669A7D00C3743B /* SReader.m */; };
 		3D88317816669A7D00C3743B /* TailCall.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D88316016669A7D00C3743B /* TailCall.m */; };
+		3D88317F1666A01100C3743B /* backquote.lsp in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3D88313216669A7C00C3743B /* backquote.lsp */; };
+		3D8831801666A01100C3743B /* cocoa.lsp in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3D88313B16669A7C00C3743B /* cocoa.lsp */; };
+		3D8831811666A01100C3743B /* defun.lsp in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3D88314216669A7C00C3743B /* defun.lsp */; };
+		3D8831821666A01100C3743B /* init.lsp in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3D88314616669A7C00C3743B /* init.lsp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		3D88311C16669A4200C3743B /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 16;
 			files = (
+				3D88317F1666A01100C3743B /* backquote.lsp in CopyFiles */,
+				3D8831801666A01100C3743B /* cocoa.lsp in CopyFiles */,
+				3D8831811666A01100C3743B /* defun.lsp in CopyFiles */,
+				3D8831821666A01100C3743B /* init.lsp in CopyFiles */,
 				3D88312A16669A4200C3743B /* GLisp.1 in CopyFiles */,
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
@@ -144,10 +152,13 @@
 		3D88312416669A4200C3743B /* GLisp */ = {
 			isa = PBXGroup;
 			children = (
+				3D88315616669A7D00C3743B /* main.m */,
+				3D88315016669A7D00C3743B /* Lisp.h */,
+				3D88315116669A7D00C3743B /* Lisp.m */,
+				3D8831831666A07700C3743B /* lisp */,
 				3D88312916669A4200C3743B /* GLisp.1 */,
 				3D88313016669A7C00C3743B /* Atom.h */,
 				3D88313116669A7C00C3743B /* Atom.m */,
-				3D88313216669A7C00C3743B /* backquote.lsp */,
 				3D88313316669A7C00C3743B /* Binding.h */,
 				3D88313416669A7C00C3743B /* Binding.m */,
 				3D88313516669A7C00C3743B /* Builtins.h */,
@@ -156,18 +167,15 @@
 				3D88313816669A7C00C3743B /* Call.m */,
 				3D88313916669A7C00C3743B /* Closure.h */,
 				3D88313A16669A7C00C3743B /* Closure.m */,
-				3D88313B16669A7C00C3743B /* cocoa.lsp */,
 				3D88313C16669A7C00C3743B /* Compiler.h */,
 				3D88313D16669A7C00C3743B /* Compiler.m */,
 				3D88313E16669A7C00C3743B /* Cons.h */,
 				3D88313F16669A7C00C3743B /* Cons.m */,
 				3D88314016669A7C00C3743B /* Const.h */,
 				3D88314116669A7C00C3743B /* Const.m */,
-				3D88314216669A7C00C3743B /* defun.lsp */,
 				3D88314316669A7C00C3743B /* FreeRef.h */,
 				3D88314416669A7C00C3743B /* FreeRef.m */,
 				3D88314516669A7C00C3743B /* Function.h */,
-				3D88314616669A7C00C3743B /* init.lsp */,
 				3D88314716669A7C00C3743B /* Keyword.h */,
 				3D88314816669A7C00C3743B /* Keyword.m */,
 				3D88314916669A7C00C3743B /* Lambda.h */,
@@ -177,13 +185,10 @@
 				3D88314D16669A7D00C3743B /* Lexer.m */,
 				3D88314E16669A7D00C3743B /* LIf.h */,
 				3D88314F16669A7D00C3743B /* LIf.m */,
-				3D88315016669A7D00C3743B /* Lisp.h */,
-				3D88315116669A7D00C3743B /* Lisp.m */,
 				3D88315216669A7D00C3743B /* LPopList.h */,
 				3D88315316669A7D00C3743B /* LPopList.m */,
 				3D88315416669A7D00C3743B /* LSetQ.h */,
 				3D88315516669A7D00C3743B /* LSetQ.m */,
-				3D88315616669A7D00C3743B /* main.m */,
 				3D88315716669A7D00C3743B /* NSObject+Evaluate.h */,
 				3D88315816669A7D00C3743B /* NSObject+Evaluate.m */,
 				3D88315916669A7D00C3743B /* SendMessage.h */,
@@ -206,6 +211,17 @@
 				3D88312816669A4200C3743B /* GLisp-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3D8831831666A07700C3743B /* lisp */ = {
+			isa = PBXGroup;
+			children = (
+				3D88313B16669A7C00C3743B /* cocoa.lsp */,
+				3D88313216669A7C00C3743B /* backquote.lsp */,
+				3D88314216669A7C00C3743B /* defun.lsp */,
+				3D88314616669A7C00C3743B /* init.lsp */,
+			);
+			name = lisp;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -378,6 +394,7 @@
 				3D88312F16669A4200C3743B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
