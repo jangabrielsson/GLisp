@@ -1,0 +1,43 @@
+(defvar *comma* (make-symbol "COMMA"))
+(defvar *comma-atsign* (make-symbol "COMMA-ATSIGN"))
+(defvar *comma-dot* (make-symbol "COMMA-DOT"))
+
+(defmacro backquote (x)
+	  (bq-process x))
+
+(defun bq-process (x)
+       (cond ((or (atom x) (stringp x)) (list 'quote x))
+	     ((eq (car x) 'backquote)
+	      (bq-process (bq-process (cadr x))))
+	     ((eq (car x) *comma*) (cadr x))
+	     ((eq (car x) *comma-atsign*)
+	      (error ",@ after ` in ~s" (cadr x)))
+	     (t (do ((p x (cdr p))
+		     (q '() (cons (bq-bracket (car p)) q)))
+		    ((atom p)
+		     (if (null p)	;; simplify if proper list TAA MOD
+			 (cons 'append (reverse q))
+			 (cons 'append
+			       (nconc (reverse q) (list (list 'quote p))))))
+		    (when (eq (car p) *comma*)
+			  (unless (null (cddr p)) (error "Malformed: ~s" p))
+			  (return (cons 'append
+					(nconc (reverse q) 
+					       (list (cadr p))))))
+		    (when (eq (car p) *comma-atsign*)
+			  (error "Dotted ,@ in ~s" p))
+		    ))))
+    
+(defun bq-bracket (x)
+       (cond ((or (atom x) (stringp x))
+	      (list 'list (list 'quote x)))
+	     ((eq (car x) *comma*)
+	      (list 'list (cadr x)))
+	     ((eq (car x) *comma-atsign*)
+	      (cadr x))
+	     (t (list 'list (bq-process x)))))
+
+(set-macro-character *aBackQuote* #'(lambda (stream) (list 'backquote (read stream))))
+(set-macro-character *aComDot* #'(lambda (stream) (list *comma-dot* (read stream))))
+(set-macro-character *aComma* #'(lambda (stream) (list *comma* (read stream))))
+(set-macro-character *aComAt* #'(lambda (stream) (list *comma-atsign* (read stream))))
