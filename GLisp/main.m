@@ -20,7 +20,6 @@ int main(int argc, const char * argv[])
     NSFileHandle *output = [NSFileHandle fileHandleWithStandardOutput];
     SPrinter *printer = [[SPrinter alloc] initWithFileHandle:output isConsole:YES];
     [Lisp lisp].STD_OUT.value = printer;
-
     [[Lisp lisp] loadFile:@"/Users/jan/Desktop/Development/GGLisp/GGLisp/init.lsp"];
 /*
     while (1) {
