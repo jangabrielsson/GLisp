@@ -5,6 +5,7 @@
 //  Created by Jan Gabrielsson on 2012-09-17.
 //  Copyright (c) 2012 Jan Gabrielsson. All rights reserved.
 //
+//  (quote ...) -> [[Const alloc] init:...]
 
 #import "Const.h"
 

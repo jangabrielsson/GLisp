@@ -21,8 +21,7 @@ NSString * const LispUserException = @"LispUserException";
 
 @dynamic stackSize;
 
-+(Lisp *)lisp
-{
++ (Lisp *) lisp {
     static Lisp *gLisp=nil;
     if(!gLisp){
         gLisp=[Lisp alloc];
@@ -34,7 +33,7 @@ NSString * const LispUserException = @"LispUserException";
     return gLisp;
 }
 
-+(void) throwException:(NSString *)type withReasonFormat:(NSString *)aReasonFormat, ... {
++ (void) throwException:(NSString *)type withReasonFormat:(NSString *)aReasonFormat, ... {
     va_list args;
     va_start(args, aReasonFormat);
     NSString *reason = [[NSString alloc] initWithFormat:aReasonFormat arguments:args];
@@ -46,8 +45,7 @@ NSString * const LispUserException = @"LispUserException";
     @throw e;
 }
 
--(id) init
-{
+- (id) init {
     if( (self=[super init])) {
         atoms = [[NSMutableDictionary alloc] init];
         _NIL = MKATOM(@"nil");
@@ -146,7 +144,7 @@ NSString * const LispUserException = @"LispUserException";
     }
 }
 
-+(NSObject *)arrayToList:(NSArray *)arr {
++ (NSObject *) arrayToList:(NSArray *)arr {
     if ([arr count] == 0)
         return [Lisp lisp].NIL;
     
@@ -160,7 +158,7 @@ NSString * const LispUserException = @"LispUserException";
     return res;
 }
 
-+(NSArray *)listToArrayWithTail:(NSObject *)list andTail:(NSObject **) tail {
++ (NSArray *) listToArrayWithTail:(NSObject *)list andTail:(NSObject **) tail {
     NSMutableArray *array = [[NSMutableArray alloc] init];
     while([list isKindOfClass:[Cons class]]) {
         [array addObject:((Cons *)list).car];
@@ -170,7 +168,7 @@ NSString * const LispUserException = @"LispUserException";
     return array;
 }
 
-+(NSArray *)listToArray:(NSObject *)list {
++ (NSArray *) listToArray:(NSObject *)list {
     NSMutableArray *array = [[NSMutableArray alloc] init];
     while(list != [Lisp lisp].NIL) {
         [array addObject:((Cons *)list).car];

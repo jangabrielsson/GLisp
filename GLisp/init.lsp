@@ -1,12 +1,12 @@
 ;;; Standard lisp functions
 
-(setq *trace-level* 1)
-(setq *log-level* 2)
-(setq *trace-tailcall* nil)
-(setq *trace-macroexpand* nil)
-(setq *trace-closure* nil)
-(setq *libraries* nil)
-(setq *library-path* "")
+(setq *trace-level* 1)          ;;; Not used yet
+(setq *log-level* 2)            ;;; Not used yet
+(setq *trace-tailcall* nil)     ;;; Logs "successful" tail calls
+(setq *trace-macroexpand* nil)  ;;; Logs macro expands
+(setq *trace-closure* nil)      ;;; Logs creations of closures...
+(setq *libraries* nil)          ;;; require/provide...
+(setq *library-path* "")        ;;; if different than current app dir...
 
 (funset 'list (lambda l l))
 
@@ -354,5 +354,5 @@
 	(toploop)
 )
 
-(toploop)
+(toploop) ;;; Ok, let's start...
 

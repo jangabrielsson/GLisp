@@ -2,8 +2,8 @@
 //  SPrinter.h
 //  GGLisp
 //
-//  Created by Jan on 2012-11-25.
-//  Copyright (c) 2012 Jan. All rights reserved.
+//  Created by Jan Gabrielsson on 2012-11-25.
+//  Copyright (c) 2012 Jan Gabrielsson. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -16,9 +16,9 @@
 
 @property NSFileHandle *file;
 
-- (id)initWithFileHandle:(NSFileHandle *)file isConsole:(BOOL)flag;
-- (void)close;
-- (void)flush;
-- (void)print:(NSObject *)obj qf:(BOOL)flag;
+- (id) initWithFileHandle:(NSFileHandle *)file isConsole:(BOOL)flag;
+- (void) close;
+- (void) flush;
+- (void) print:(NSObject *)obj qf:(BOOL)flag;
 
 @end

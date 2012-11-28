@@ -2,8 +2,8 @@
 //  SPrinter.m
 //  GGLisp
 //
-//  Created by Jan on 2012-11-25.
-//  Copyright (c) 2012 Jan. All rights reserved.
+//  Created by Jan Gabrielsson on 2012-11-25.
+//  Copyright (c) 2012 Jan Gabrielsson. All rights reserved.
 //
 
 #import "SPrinter.h"
