@@ -44,7 +44,7 @@
 }
 
 - (void) close {
-    
+    [self.file closeFile];
 }
 
 - (void) flush {

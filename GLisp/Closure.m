@@ -33,7 +33,6 @@
 //
 
 #import "Closure.h"
-#import "FreeRef.h"
 
 @implementation Closure
 

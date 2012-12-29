@@ -17,7 +17,6 @@
 		3D88316716669A7D00C3743B /* Compiler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D88313D16669A7C00C3743B /* Compiler.m */; };
 		3D88316816669A7D00C3743B /* Cons.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D88313F16669A7C00C3743B /* Cons.m */; };
 		3D88316916669A7D00C3743B /* Const.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D88314116669A7C00C3743B /* Const.m */; };
-		3D88316A16669A7D00C3743B /* FreeRef.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D88314416669A7C00C3743B /* FreeRef.m */; };
 		3D88316B16669A7D00C3743B /* Keyword.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D88314816669A7C00C3743B /* Keyword.m */; };
 		3D88316C16669A7D00C3743B /* Lambda.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D88314A16669A7C00C3743B /* Lambda.m */; };
 		3D88316D16669A7D00C3743B /* lex.lm in Sources */ = {isa = PBXBuildFile; fileRef = 3D88314B16669A7C00C3743B /* lex.lm */; };
@@ -79,8 +78,6 @@
 		3D88314016669A7C00C3743B /* Const.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Const.h; sourceTree = "<group>"; };
 		3D88314116669A7C00C3743B /* Const.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Const.m; sourceTree = "<group>"; };
 		3D88314216669A7C00C3743B /* defun.lsp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = defun.lsp; sourceTree = "<group>"; };
-		3D88314316669A7C00C3743B /* FreeRef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreeRef.h; sourceTree = "<group>"; };
-		3D88314416669A7C00C3743B /* FreeRef.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FreeRef.m; sourceTree = "<group>"; };
 		3D88314516669A7C00C3743B /* Function.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Function.h; sourceTree = "<group>"; };
 		3D88314616669A7C00C3743B /* init.lsp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = init.lsp; sourceTree = "<group>"; };
 		3D88314716669A7C00C3743B /* Keyword.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Keyword.h; sourceTree = "<group>"; };
@@ -188,8 +185,6 @@
 				3D88314A16669A7C00C3743B /* Lambda.m */,
 				3D88313916669A7C00C3743B /* Closure.h */,
 				3D88313A16669A7C00C3743B /* Closure.m */,
-				3D88314316669A7C00C3743B /* FreeRef.h */,
-				3D88314416669A7C00C3743B /* FreeRef.m */,
 				3D88315F16669A7D00C3743B /* TailCall.h */,
 				3D88316016669A7D00C3743B /* TailCall.m */,
 				3D88314B16669A7C00C3743B /* lex.lm */,
@@ -285,7 +280,6 @@
 				3D88316716669A7D00C3743B /* Compiler.m in Sources */,
 				3D88316816669A7D00C3743B /* Cons.m in Sources */,
 				3D88316916669A7D00C3743B /* Const.m in Sources */,
-				3D88316A16669A7D00C3743B /* FreeRef.m in Sources */,
 				3D88316B16669A7D00C3743B /* Keyword.m in Sources */,
 				3D88316C16669A7D00C3743B /* Lambda.m in Sources */,
 				3D88316D16669A7D00C3743B /* lex.lm in Sources */,

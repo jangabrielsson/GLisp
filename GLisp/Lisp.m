@@ -146,9 +146,7 @@ NSString * const LispUserException = @"LispUserException";
     NSObject *obj = [reader read];
     if (obj == nil)
         return [Lisp lisp].NIL;
-    NSObject *cObj = [Compiler compile:obj];
-    
-    return [cObj eval:nil];
+    return [[Compiler compile:obj] eval:nil];
 }
 
 - (void) loadFile:(NSString *)path {

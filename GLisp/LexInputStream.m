@@ -2,7 +2,7 @@
 //  LexInputStream.m
 //  GLisp
 //
-//  Wrapper for lex to read from a NSFileHandle...
+//  Wrapper for lex to read from a NSFileHandle and NSData
 //
 //  Created by Janb Gabrielsson on 2012-11-03.
 //
