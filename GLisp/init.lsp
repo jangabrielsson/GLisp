@@ -341,7 +341,7 @@
 (defvar *** nil)
 
 (defun toploop()
-	(print "GGLisp>")
+	(print "GLisp>")
 	(flush)
 	(setq expr (read *stdin*))
 	(setq res (catch 'nil (eval expr)))
@@ -354,5 +354,5 @@
 	(toploop)
 )
 
-(toploop) ;;; Ok, let's start...
+;;;(toploop) ;;; Ok, let's start...
 

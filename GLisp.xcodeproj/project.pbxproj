@@ -21,7 +21,7 @@
 		3D88316B16669A7D00C3743B /* Keyword.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D88314816669A7C00C3743B /* Keyword.m */; };
 		3D88316C16669A7D00C3743B /* Lambda.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D88314A16669A7C00C3743B /* Lambda.m */; };
 		3D88316D16669A7D00C3743B /* lex.lm in Sources */ = {isa = PBXBuildFile; fileRef = 3D88314B16669A7C00C3743B /* lex.lm */; };
-		3D88316E16669A7D00C3743B /* Lexer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D88314D16669A7D00C3743B /* Lexer.m */; };
+		3D88316E16669A7D00C3743B /* LexInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D88314D16669A7D00C3743B /* LexInputStream.m */; };
 		3D88316F16669A7D00C3743B /* LIf.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D88314F16669A7D00C3743B /* LIf.m */; };
 		3D88317016669A7D00C3743B /* Lisp.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D88315116669A7D00C3743B /* Lisp.m */; };
 		3D88317116669A7D00C3743B /* LPopList.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D88315316669A7D00C3743B /* LPopList.m */; };
@@ -88,8 +88,8 @@
 		3D88314916669A7C00C3743B /* Lambda.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Lambda.h; sourceTree = "<group>"; };
 		3D88314A16669A7C00C3743B /* Lambda.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Lambda.m; sourceTree = "<group>"; };
 		3D88314B16669A7C00C3743B /* lex.lm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.lex; path = lex.lm; sourceTree = "<group>"; };
-		3D88314C16669A7C00C3743B /* Lexer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Lexer.h; sourceTree = "<group>"; };
-		3D88314D16669A7D00C3743B /* Lexer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Lexer.m; sourceTree = "<group>"; };
+		3D88314C16669A7C00C3743B /* LexInputStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LexInputStream.h; sourceTree = "<group>"; };
+		3D88314D16669A7D00C3743B /* LexInputStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LexInputStream.m; sourceTree = "<group>"; };
 		3D88314E16669A7D00C3743B /* LIf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIf.h; sourceTree = "<group>"; };
 		3D88314F16669A7D00C3743B /* LIf.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LIf.m; sourceTree = "<group>"; };
 		3D88315016669A7D00C3743B /* Lisp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Lisp.h; sourceTree = "<group>"; };
@@ -110,6 +110,7 @@
 		3D88315F16669A7D00C3743B /* TailCall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TailCall.h; sourceTree = "<group>"; };
 		3D88316016669A7D00C3743B /* TailCall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TailCall.m; sourceTree = "<group>"; };
 		3D88316116669A7D00C3743B /* y.tab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = y.tab.h; sourceTree = "<group>"; };
+		3D8831841666B08300C3743B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +128,7 @@
 		3D88311316669A4200C3743B = {
 			isa = PBXGroup;
 			children = (
+				3D8831841666B08300C3743B /* README.md */,
 				3D88312416669A4200C3743B /* GLisp */,
 				3D88312116669A4200C3743B /* Frameworks */,
 				3D88311F16669A4200C3743B /* Products */,
@@ -192,8 +194,8 @@
 				3D88316016669A7D00C3743B /* TailCall.m */,
 				3D88314B16669A7C00C3743B /* lex.lm */,
 				3D88316116669A7D00C3743B /* y.tab.h */,
-				3D88314C16669A7C00C3743B /* Lexer.h */,
-				3D88314D16669A7D00C3743B /* Lexer.m */,
+				3D88314C16669A7C00C3743B /* LexInputStream.h */,
+				3D88314D16669A7D00C3743B /* LexInputStream.m */,
 				3D88315716669A7D00C3743B /* NSObject+Evaluate.h */,
 				3D88315816669A7D00C3743B /* NSObject+Evaluate.m */,
 				3D88315B16669A7D00C3743B /* SPrinter.h */,
@@ -287,7 +289,7 @@
 				3D88316B16669A7D00C3743B /* Keyword.m in Sources */,
 				3D88316C16669A7D00C3743B /* Lambda.m in Sources */,
 				3D88316D16669A7D00C3743B /* lex.lm in Sources */,
-				3D88316E16669A7D00C3743B /* Lexer.m in Sources */,
+				3D88316E16669A7D00C3743B /* LexInputStream.m in Sources */,
 				3D88316F16669A7D00C3743B /* LIf.m in Sources */,
 				3D88317016669A7D00C3743B /* Lisp.m in Sources */,
 				3D88317116669A7D00C3743B /* LPopList.m in Sources */,

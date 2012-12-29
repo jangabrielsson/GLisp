@@ -1,8 +1,8 @@
 //
-//  LSetQ.h
+//  LexInputStream.h
 //  GLisp
 //
-//  Created by Jan Gabrielsson on 2012-09-20.
+//  Created by Jan Gabrielsson on 2012-11-03.
 //
 //  Copyright (c) 2012, Jan Gabrielsson
 //  All rights reserved.
@@ -34,12 +34,25 @@
 
 #import <Foundation/Foundation.h>
 
-#import "Lisp.h"
+typedef void * YY_BUFFER_STATE;
 
-@interface LSetQ : NSObject
+@interface LexInputStream : NSObject {
+    BOOL _closed;
+    YY_BUFFER_STATE _yybuffer;
+}
 
-@property NSArray *args;
+@property NSFileHandle *file;
+@property NSData *data;
+@property BOOL isConsole;
+@property BOOL closed;
 
-- (id)initWithArgs:(NSArray *)args;
+- (id)initWithFileHandle:(NSFileHandle *)file isConsole:(BOOL)flag;
+- (id)initWithData:(NSData *)data;
+
+- (int) readInputForLexer:(char *)buffer numBytes:(int *)numBytesRead maxBytes:(int)maxBytesToRead;
+
+- (int)yylex:(char **)yytextPtr;
+- (void)close;
+- (void)flush;
 
 @end
